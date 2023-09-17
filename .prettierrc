@@ -1,5 +1,15 @@
 {
 	"singleQuote": true,
 	"tabWidth": 2,
-	"useTabs": true
+	"useTabs": true,
+	"semi": false,
+	"printWidth": 100,
+	"overrides": [
+		{
+			"files": "*.config.mjs",
+			"options": {
+				"parser": "babel"
+			}
+		}
+	]
 }

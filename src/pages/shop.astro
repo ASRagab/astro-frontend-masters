@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/defaults.astro'
+import ShopItems from '../components/shop-items.astro'
+import { Cart } from '../components/solid/cart'
+---
+
+<Layout>
+	<div class="shop">
+		<h1>Shop Sandwich Kits</h1>
+		<noscript>
+			<p>Javascript is required to use the shopping cart</p>
+		</noscript>
+		<div class="products">
+			<ShopItems />
+			<Cart client:only="solid-js" />
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.shop {
+		padding: 3rem 5%;
+	}
+
+	.products {
+		align-items: flex-start;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr 260px;
+		position: relative;
+	}
+</style>
